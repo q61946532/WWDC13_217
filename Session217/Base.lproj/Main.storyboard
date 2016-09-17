@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ZJWMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgn-Y0-Bdw">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Nm-gN-7FO">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tVV-wO-nu5">
+                                            <size key="itemSize" width="205" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="dLP-Ms-1W0"/>
+                                        </connections>
+                                    </collectionView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIH-jF-epN">
+                                        <rect key="frame" x="320" y="0.0" width="320" height="460"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="3Nm-gN-7FO" secondAttribute="bottom" id="Dc8-Aw-mdX"/>
+                                    <constraint firstItem="3Nm-gN-7FO" firstAttribute="leading" secondItem="pgn-Y0-Bdw" secondAttribute="leading" id="E6q-7C-fNK"/>
+                                    <constraint firstAttribute="trailing" secondItem="yIH-jF-epN" secondAttribute="trailing" id="Fqs-xD-Y07"/>
+                                    <constraint firstItem="yIH-jF-epN" firstAttribute="top" secondItem="pgn-Y0-Bdw" secondAttribute="top" id="Kcu-AW-lo0"/>
+                                    <constraint firstAttribute="bottom" secondItem="yIH-jF-epN" secondAttribute="bottom" id="QOL-1x-1ha"/>
+                                    <constraint firstItem="3Nm-gN-7FO" firstAttribute="top" secondItem="pgn-Y0-Bdw" secondAttribute="top" id="Yni-ha-eTx"/>
+                                    <constraint firstItem="yIH-jF-epN" firstAttribute="width" secondItem="pgn-Y0-Bdw" secondAttribute="width" id="a6b-Jr-EIo"/>
+                                    <constraint firstItem="3Nm-gN-7FO" firstAttribute="trailing" secondItem="pgn-Y0-Bdw" secondAttribute="trailing" multiplier="0.5" id="aff-TP-kQa"/>
+                                    <constraint firstItem="3Nm-gN-7FO" firstAttribute="width" secondItem="pgn-Y0-Bdw" secondAttribute="width" id="khX-GJ-sTS"/>
+                                    <constraint firstItem="3Nm-gN-7FO" firstAttribute="height" secondItem="pgn-Y0-Bdw" secondAttribute="height" id="ttz-WS-lK2"/>
+                                    <constraint firstItem="yIH-jF-epN" firstAttribute="height" secondItem="pgn-Y0-Bdw" secondAttribute="height" id="zIL-sL-gxQ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pgn-Y0-Bdw" secondAttribute="bottom" id="6WT-Og-FSA"/>
+                            <constraint firstItem="pgn-Y0-Bdw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="YUZ-Ok-6XV"/>
+                            <constraint firstItem="pgn-Y0-Bdw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iV5-QP-Zku"/>
+                            <constraint firstAttribute="trailing" secondItem="pgn-Y0-Bdw" secondAttribute="trailing" id="z8i-RP-cvG"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="3Nm-gN-7FO" id="B4G-ig-JXc"/>
+                        <outlet property="colorView" destination="yIH-jF-epN" id="Xmz-e7-Lu4"/>
+                        <outlet property="scrollView" destination="pgn-Y0-Bdw" id="6uD-iF-WlW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="271"/>
+        </scene>
+    </scenes>
+</document>
