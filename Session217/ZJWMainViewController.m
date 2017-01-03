@@ -32,6 +32,10 @@
 
 }
 
+- (void)dealloc
+{
+
+}
 
 - (void)scrollingCellDidBeginPulling:(ZJWCollectionViewCell *)cell
 {
